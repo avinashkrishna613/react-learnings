@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- ensure document rendered in browser using standard mode(no quirks or limited quirks)-->
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href = "index.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div id="root"></div> <!-- if we have anything inside this div, they will get replaced-->
+
+    <!-- <script>
+        var heading = document.createElement("h1");
+        heading.innerText = "Hello world from Javascript!";
+        // innerHtml - doesn't parse the text content of the node
+        // innerText - gives the plain text content of the node
+        // https://www.geeksforgeeks.org/difference-between-innertext-and-innerhtml/
+
+        var root = document.getElementById("root");
+        root.appendChild(heading);
+
+        var root1 = document.getElementById("root1");
+        console.log(root1.innerText);
+
+    </script> -->
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="./App.js">
+
+    </script>
+</body>
+
+</html>
