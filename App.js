@@ -7,23 +7,23 @@ import ReactDOM from "react-dom/client";
  *      <h1>h1 tag</h1>
  *  </div>
  * </div>
- * 
+ *
  */
 
-var parent = React.createElement(
-    "div", 
-    { id: "parent" }, 
-    React.createElement(
-        "div", 
-        { id: "child1" }, 
-        React.createElement(
-            "h1", 
-            {}, 
-            "h1 heading")));
+const Title = () => (
+  <div id="title">
+    <h1>This is title component</h1>
+  </div>
+);
 
-// 2nd arg is config, which will be treated as props to the element.
+const HeadingComponent = () => (
+  <div id="heading">
+    {Title()}
+    <h1>This is a heading component</h1>
+  </div>
+);
 
 // now we need to render this heading into the root dom
 var root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parent);
+root.render(<HeadingComponent />);
